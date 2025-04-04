@@ -21,14 +21,15 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'linebreak-style': 0,
   },
-  // // Uncomment this and update according you needs
-  // overrides: [{
-  //   files: [
-  //     "cdk/**/*.ts"
-  //   ],
-  //   parserOptions: {
-  //     "project": "cdk/tsconfig.json"
-  //   },
-  // }],
+  // Uncomment this and update according you needs
+  overrides: [
+    {
+      files: ['cdk/**/*.ts'],
+      parserOptions: {
+        project: 'cdk/tsconfig.json',
+      },
+    },
+  ],
 };
