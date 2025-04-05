@@ -1,13 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import serverlessExpress from '@codegenie/serverless-express';
 import { Callback, Context, Handler } from 'aws-lambda';
-
 import helmet from 'helmet';
 
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 
 let server: Handler;
+console.log(NestFactory);
 
 async function createApp() {
   const app = await NestFactory.create(AppModule);
