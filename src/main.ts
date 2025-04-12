@@ -7,7 +7,7 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 
 let server: Handler;
-console.log(NestFactory);
+console.log(process.env.POSTGRES_PORT);
 
 async function createApp() {
   const app = await NestFactory.create(AppModule);

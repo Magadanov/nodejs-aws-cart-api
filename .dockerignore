@@ -1,0 +1,20 @@
+# ignore .elasticbeanstalk, node_modules, npm-debug.log, Dockerfile, .dockerignore, dist, webpack.config.js
+# Ignore the following files and directories in the Docker build context
+.elasticbeanstalk
+
+# host machine dependencies and can cause issues if copied into the container due to platform incompatibilities
+# and in docker we will install dependencies
+node_modules
+
+# log file generated during failed npm installs
+npm-debug.log
+
+Dockerfile
+
+.dockerignore
+
+# dist build inside the container
+dist
+
+# docker build app with npm run start:prod
+webpack.config.js
